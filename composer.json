@@ -1,0 +1,30 @@
+{
+    "name": "matin-utils/types-tracker",
+    "description": "a utility for track all Types in Laravel apilcation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xani",
+            "email": "xaniatmatin@gmail.com"
+        }
+    ],
+    "require": {},
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MatinUtils\\TypesTracker\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "classmap": [],
+        "files": [
+            "Functions.php"
+        ],
+        "psr-4": {
+            "MatinUtils\\TypesTracker\\": "src/"
+        }
+    }
+}
