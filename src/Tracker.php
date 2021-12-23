@@ -28,12 +28,12 @@ class Tracker
 
     public function getName($category = null, $id = null)
     {
-        return empty($category) ? array_keys($this->types) : empty($id) ? array_values($this->types[$category] ?? []) : $this->types[$category][$id] ?? null;
+        return empty($category) ? array_keys($this->types) : (empty($id) ? array_values($this->types[$category] ?? []) : $this->types[$category][$id] ?? null);
     }
 
     public function getId($category = null, $name = null)
     {
-        return empty($category) ? array_keys($this->types) : empty($name) ? array_keys(array_flip($this->types[$category] ?? [])) : array_flip($this->types[$category])[$name] ?? null;
+        return empty($category) ? array_keys($this->types) : (empty($name) ? array_keys(array_flip($this->types[$category] ?? [])) : array_flip($this->types[$category])[$name] ?? null);
     }
 
     public function search($category = null, $case = null)
