@@ -45,7 +45,7 @@ class Tracker
             return $this->types[$category] ?? [];
         }
         if (empty($case)) {
-            return array_values($this->types[$category] ?? []);
+            return $this->types[$category] ?? [];
         }
         if (is_numeric($case)) {
             return $this->types[$category][$case] ?? null;
